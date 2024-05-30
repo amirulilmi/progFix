@@ -91,4 +91,4 @@ def submit():
         return render_template('hasil.html', nama=nama,usia=usia, gender=gender, predict=predicted_class)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
