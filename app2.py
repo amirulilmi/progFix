@@ -8,11 +8,11 @@ from sklearn.preprocessing import StandardScaler
 import pickle
 
 # Load model
-model_path = 'C:/laragon/www/progFIX/trained.h5'
+model_path = 'trained.h5'
 model = load_model(model_path)
 
 # Load scaler
-scaler_path = 'C:/laragon/www/progFIX/fitted_scaler.pkl'
+scaler_path = 'fitted_scaler.pkl'
 with open(scaler_path, 'rb') as file:
     scaler = pickle.load(file)
 
