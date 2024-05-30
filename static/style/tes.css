@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --main-color:#006666;
+    --text-color:#1B2C21;
+    --bg-color:#F7F7F7;
+    --big-font:3.1rem;
+    --h2-font:1.4rem;
+    --p-font:0.9rem;
+}
+
+*::selection{
+    color: #1B2C21;
+    background: var(--main-color);
+}
+
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background: var(--bg-color);
+}
+
+.logo{
+    position: relative;
+    width: 100px;
+    height: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar li{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+    transition: .4s;
+}
+
+.cek-gejala{
+    padding: 10px 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0.5rem;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+section{
+    padding: 120px 11%;
+}
+
+.menu{
+    display: flex;
+    float: right;
+}
+
+.container {
+    max-width: 60%;
+    height: 100%;
+    margin: 50px 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h3{
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.container h4{
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container p{
+    text-align: justify;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+form{
+    padding: 10px;
+    margin: 8px;
+}
+
+.form-field {
+    display: block;
+    align-items: center;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 4px;
+}
+
+.form-view {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  height: 430px;
+  background: #fff;
+  padding: 25px;
+  margin-top: 52px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.form-view header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-view h3{
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+  color: var(--main-color);
+}
+
+.forms .input-box {
+  width: 100%;
+}
+
+.input-box label {
+  color: #333;
+}
+
+.forms :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.forms .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.forms :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.forms .gender {
+  column-gap: 5px;
+}
+
+.gender-box h4{
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.gender input {
+  accent-color: var(--main-color);
+}
+
+.forms :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+
+.gender label {
+  color: #707070;
+  padding-top: 5px;
+}
+
+.button-container {
+    text-align: center;
+    margin: 10px;
+}
+
+button[type="submit"] {
+    background-color: var(--main-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+a{
+    color: #F7F7F7;
+}
+
+button[type="submit"]:hover {
+    background-color: #88b5b5;
+}
+
+.upload {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   padding-top: 15px;
+}
+
+.details{
+  font-weight: 600;
+}
+
+.opsi{
+  padding: 5px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}

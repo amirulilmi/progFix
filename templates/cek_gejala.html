@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/tes.css') }}" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+    <title>Skripsi</title>
+</head>
+
+<body>
+    <header>
+        <a href=""><img src="{{ url_for('static', filename='image/logo.png') }}" class="logo"></a>
+        <ul class="navbar">
+
+            <div class="cek-gejala">
+                <li>Cek Gejala - MentalCare</li>
+            </div>
+        </ul>
+    </header>
+
+    <section class="menu" id="menu">
+        <div class="form-view">
+            <form method="POST" class="forms" action="/submit" enctype="multipart/form-data">
+                <h3>Form Data Pasien </h3>
+
+                <div class="input-box">
+                    <label>Nama Lengkap</label>
+                    <input type="text" name="nama" placeholder="Tuliskan nama lengkap Anda" required />
+                </div>
+                <div class="input-box">
+                    <label>Umur</label>
+                    <input type="text" name="usia" placeholder="Berapa usia Anda?" required />
+                </div>
+                <div class="gender-box">
+                    <h4>Gender</h4>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender" value="Pria" checked />
+                            <label for="check-male">Laki-laki</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-female" name="gender" value="Wanita" />
+                            <label for="check-female">Perempuan</label>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+            <h3>Deskripsikan Gejala Anda</h3>
+            <p>Anda dapat memilih gejala yang pernah/sedang Anda alami pada pilihan yang tersedia dibawah ini.
+                Pilihlah semua gejala untuk hasil yang lebih akurat.</p>
+            <h4>Gejala apa yang pernah/sedang Anda rasakan?</h4>
+
+
+         
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        1. Apakah anda merasa gelisah dan khawatir akan sesuatu hal?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan1">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        2. Apakah anda mudah lelah setelah melakukan aktivitas?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan2">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        3. Apakah anda mengalami gemetaran pada tangan?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan3">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        4. Apakah anda sulit berkonsentrasi atau pikiran menjadi blank?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan4">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+                
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        5. Apakah anda mudah marah perkara hal sepele?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan5">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        6. Apakah anda kesulitan untuk tidur malam di waktu yang tepat?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan6">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        7. Apakah suasana hati anda tertekan dan mudah tersinggung hampir setiap harinya?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan7">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        8. Apakah anda tidak dapat merasakan perasaan yang positif?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan8">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        9. Apakah anda mengalami keputusasaan?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan9">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        10. Apakah anda merasa tidak memiliki masa depan?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan10">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        11. Apakah anda merasakan perasaan tidak berharga atau rasa bersalah yang berlebihan terhadap sesuatu? (yang mungkin bersifat delusional) hampir setiap hari (bukan sekadar menyalahkan diri sendiri atau merasa bersalah karena sakit).
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan11">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+
+                <div class="form-field">
+                    <input type="hidden" name="kode_gejala[]" value="1">
+                    <label for="gejala">
+                        12. Apakah anda sering merasa  keinginan bunuh diri yang berulang, atau percobaan bunuh diri atau rencana khusus untuk bunuh diri?
+                    </label>
+                    <p class="opsi"><select id="cf_user" name="pilihan12">
+                            <option value="0">Pilih Pernyataan</option>
+                            <option value="1">tidak pernah</option>
+                            <option value="4">kadang-kadang</option>
+                            <option value="7">sering</option>
+                            <option value="9">sangat sering</option>
+                        </select></p>
+                </div>
+                
+
+            <div class="button-container">
+                <button type="submit" style="color:white">Submit</button>
+            </div>
+            <!-- <span class="details">Telusuri file yang akan diunggah (opsional): JPG, JPEG, PNG, PDF</span>
+            <div class="upload">
+                <input type="file" name="userfile" size="20">
+            </div> -->
+        </div>
+
+        </form>
+    </section>
+</body>
+
+</html>
