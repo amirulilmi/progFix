@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for, ses
 import pandas as pd
 import numpy as np
 import re
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 import pickle
