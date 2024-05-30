@@ -3,4 +3,5 @@ pandas
 numpy
 keras-models
 tensorflow
+scikit-learn
 pickle5
