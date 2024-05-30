@@ -1,0 +1,7 @@
+Flask
+pandas
+numpy
+re
+tensorflow.keras.models
+sklearn.preprocessing
+pickle
