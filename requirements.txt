@@ -2,4 +2,4 @@ Flask
 pandas
 numpy
 keras-models
-pickle
+pickle5
