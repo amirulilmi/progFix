@@ -5,3 +5,5 @@ keras-models
 tensorflow
 scikit-learn
 pickle5
+streamlit
+streamlit_option_menu
